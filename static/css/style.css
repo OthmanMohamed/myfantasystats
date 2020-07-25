@@ -1,4 +1,7 @@
 /*Start Main Rules*/
+body {
+  zoom: 0.8;
+}
 
 body {
   width: 100%;
