@@ -1,0 +1,90 @@
+{% extends 'base.html' %} {% block head %}
+<title>My Fantasy Stats</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  addEventListener(
+    "load",
+    function () {
+      setTimeout(hideURLbar, 0);
+    },
+    false
+  );
+
+  function hideURLbar() {
+    window.scrollTo(0, 1);
+  }
+</script>
+<!-- //Meta tag Keywords -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/style_login.css') }}"
+/>
+{% endblock %} {% block body %}
+<!-- /login-section -->
+
+<section class="w3l-forms-23">
+  <div class="forms23-block-hny">
+    <div class="wrapper">
+      {% if error == 1 %}
+      <h2 id="error-msg">ID Error! Please make sure to enter valid team ID.</h2>
+      {% endif %}
+      <h1>My Fantasy Stats</h1>
+      <!-- if logo is image enable this   
+					<a class="logo" href="index.html">
+					  <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+					</a> 
+        -->
+      <div class="d-grid forms23-grids">
+        <div class="form23">
+          <div class="main-bg">
+            <h6 class="sec-one"></h6>
+          </div>
+          <div class="bottom-content">
+            <h2>Enter Team ID</h2>
+            <p>
+              Enter Team ID to get all the season stats of the team like (Best
+              Players, Captain Statistics, Selection Stats by Teams, Season's
+              Dream Team) and more !!!
+            </p>
+            <form action="/main" method="POST" onsubmit="showLoader()">
+              <input
+                type="text"
+                name="content"
+                id="content"
+                class="input-form"
+                placeholder="Enter Team ID"
+                required="required"
+              />
+              <button type="submit" class="loginhny-btn btn">GO</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //login-section -->
+
+<!-- Loader Page -->
+<div class="loader-wrapper" display="none">
+  <div class="revolver">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  <div class="message">Loading ...</div>
+</div>
+<!-- End Loader Page -->
+
+<script>
+  body = document.querySelector("body");
+  body.onload = hideLoader;
+
+  function showLoader() {
+    document.querySelector(".loader-wrapper").style.display = "flex";
+  }
+  function hideLoader() {
+    document.querySelector(".loader-wrapper").style.display = "none";
+  }
+</script>
+
+{% endblock %}

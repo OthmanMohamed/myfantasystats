@@ -1,0 +1,519 @@
+{% extends 'base.html' %} {% block head %}
+<title>My Fantasy Stats: {{overview.team_name}}</title> {% endblock %} {% block
+body %}
+<!-- Start Header -->
+<div class="header">
+  <div class="content">
+    <h2>My Fantasy Stats</h2>
+    <div class="h-r"><span id="bottom"></span></div>
+    <form action="/main" method="POST">
+      <label>Enter another ID</label>
+      <input type="text" name="content" id="contnet" />
+      <input type="submit" value="GO" onclick="showLoader()" />
+    </form>
+  </div>
+</div>
+<div class="bottom-border"></div>
+<!-- End Header -->
+
+<!-- Start Overview -->
+<div class="container">
+  <h2>Season's Overview</h2>
+  <div class="h-r"><span></span></div>
+</div>
+<div class="overview">
+  <div class="container">
+    <div class="overview-holder">
+      <div class="left">
+        <div class="up"><h3>Manager Name</h3></div>
+        <div class="down"><h2>{{overview.name}}</h2></div>
+      </div>
+      <div class="mid">
+        <div class="up"><h3>Team Name</h3></div>
+        <div class="down"><h2>{{overview.team_name}}</h2></div>
+      </div>
+      <div class="right">
+        <div class="up">
+          <div class="team-info">
+            <div class="info">
+              <div class="h-div"><h5>Total Points</h5></div>
+              <div class="s-div">
+                <span>{{"{:,}".format(overview.total_points)}}</span>
+                <span class="jsValueHolder" display="none"
+                  >{{overview.total_points}}</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="info">
+              <div class="h-div"><h5>Overall Rank</h5></div>
+              <div class="s-div">
+                <span>{{"{:,}".format(overview.overall_rank)}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="info">
+              <div class="h-div"><h5>Number of Unique Players</h5></div>
+              <div class="s-div">
+                <span>{{"{:,}".format(overview.unique_players)}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="info">
+              <div class="h-div"><h5>Total minutes</h5></div>
+              <div class="s-div">
+                <span>{{"{:,}".format(overview.total_minutes)}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="down">
+          <div class="clearFix"></div>
+          <div class="team-info">
+            <div class="info">
+              <div class="h-div"><h5>Total Goals</h5></div>
+              <div class="s-div">
+                <span>{{"{:,}".format(overview.total_goals)}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="info">
+              <div class="h-div"><h5>Total Assists</h5></div>
+              <div class="s-div">
+                <span>{{"{:,}".format(overview.total_assists)}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="info">
+              <div class="h-div"><h5>Total Bonus Points</h5></div>
+              <div class="s-div">
+                <span>{{"{:,}".format(overview.total_bonus)}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="info">
+              <div class="h-div"><h5>Total Clean Sheets</h5></div>
+              <div class="s-div">
+                <span>{{"{:,}".format(overview.clean_sheets)}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Overview -->
+
+<!-- Start Player Cards -->
+<div class="clearfix"></div>
+<div class="player-cards">
+  <div class="container">
+    <h2>Season's Top Performers</h2>
+    <div class="h-r"><span></span></div>
+  </div>
+  <div class="card">
+    <div class="image-holder">
+      <img
+        src="https://resources.premierleague.com/premierleague/photos/players/110x140/p{{myTeamPlayers_sorted[0].photo}}.png"
+        alt="{{myTeamPlayers_sorted[0].name}}"
+      />
+    </div>
+    <h1>{{myTeamPlayers_sorted[0].name}}</h1>
+    <p class="title">
+      Total Points <span>{{myTeamPlayers_sorted[0].total_points}}</span>
+    </p>
+    <p class="info">
+      Goals <span>{{myTeamPlayers_sorted[0].goals_scored}}</span>
+    </p>
+    <p class="info">Assists <span>{{myTeamPlayers_sorted[0].assists}}</span></p>
+    <p class="info">
+      Bonus Points <span>{{myTeamPlayers_sorted[0].bonus}}</span>
+    </p>
+    <p class="info">
+      Bought for <span>{{myTeamPlayers_sorted[0].bought_for}} Million</span>
+    </p>
+    <p class="card-title-holder">
+      <span class="card-title">Season's Top Player</span>
+    </p>
+  </div>
+  <div class="card">
+    <div class="image-holder">
+      <img
+        src="https://resources.premierleague.com/premierleague/photos/players/110x140/p{{topVPMPlayer.photo}}.png"
+        alt="{{topVPMPlayer.name}}"
+      />
+    </div>
+    <h1>{{topVPMPlayer.name}}</h1>
+    <p class="title">Total Points <span>{{topVPMPlayer.total_points}}</span></p>
+    <p class="info">
+      Bought For <span>{{topVPMPlayer.bought_for}} Million</span>
+    </p>
+    <p class="info">
+      Times in Team <span>{{topVPMPlayer.gameweeks_in_team}}</span>
+    </p>
+    <p class="info">
+      Times in Starting XI <span>{{topVPMPlayer.gameweeks_on_pitch}}</span>
+    </p>
+    <p class="info">Value per Million <span>{{topVPMPlayer.VPM}}</span></p>
+    <p class="card-title-holder">
+      <span class="card-title">Best Value per Million</span>
+    </p>
+  </div>
+  <div class="card">
+    <div class="image-holder">
+      <img
+        src="https://resources.premierleague.com/premierleague/photos/players/110x140/p{{mostCaptainedPlayer.photo}}.png"
+        alt="{{mostCaptainedPlayer.name}}"
+      />
+    </div>
+    <h1>{{mostCaptainedPlayer.name}}</h1>
+    <p class="title">
+      Total Points <span>{{mostCaptainedPlayer.total_points}}</span>
+    </p>
+    <p class="info">
+      Times in Team <span>{{mostCaptainedPlayer.gameweeks_in_team}}</span>
+    </p>
+    <p class="info">
+      Times Captain <span>{{mostCaptainedPlayer.times_captain}}</span>
+    </p>
+    <p class="info">
+      Times Vice Captain <span>{{mostCaptainedPlayer.times_vice_captain}}</span>
+    </p>
+    <p class="info">
+      Times Top Player of the Team
+      <span>{{mostCaptainedPlayer.gameweeks_best_player}}</span>
+    </p>
+    <p class="card-title-holder">
+      <span class="card-title">Prefered Captain</span>
+    </p>
+  </div>
+</div>
+<!-- End Player Cards -->
+
+<!-- Start Players Performance -->
+<div class="player-performance">
+  <div class="button-wrapper">
+    <button type="button" class="collapsible">
+      Players' Performance
+    </button>
+  </div>
+  <div class="container">
+    <div class="content">
+      <table id="playerTable">
+        <thead>
+          <tr>
+            <th class="fixed-col" onclick="sortTable(0, 'playerTable')">
+              Player Name<span></span>
+            </th>
+            <th onclick="sortTable(1, 'playerTable')">Team<span></span></th>
+            <th onclick="sortTable(2, 'playerTable')">
+              Points<span> &darr;</span>
+            </th>
+            <th onclick="sortTable(3, 'playerTable')">Percentage from Total Points<span></span></th>
+            <th onclick="sortTable(4, 'playerTable')">
+              Bought For (Million $)<span></span>
+            </th>
+            <th onclick="sortTable(5, 'playerTable')">
+              Value Per Million<span></span>
+            </th>
+            <th onclick="sortTable(6, 'playerTable')">Minutes<span></span></th>
+            <th onclick="sortTable(7, 'playerTable')">Goals<span></span></th>
+            <th onclick="sortTable(8, 'playerTable')">Assists<span></span></th>
+            <th onclick="sortTable(9, 'playerTable')">Saves<span></span></th>
+            <th onclick="sortTable(10, 'playerTable')">
+              Clean Sheets<span></span>
+            </th>
+            <th onclick="sortTable(11, 'playerTable')">Bonus<span></span></th>
+            <th onclick="sortTable(12, 'playerTable')">
+              Times In Team<span></span>
+            </th>
+            <th onclick="sortTable(13, 'playerTable')">
+              Times In Starting XI<span></span>
+            </th>
+            <th onclick="sortTable(14, 'playerTable')">
+              Times Captain<span></span>
+            </th>
+            <th onclick="sortTable(15, 'playerTable')">
+              Times Vice Captain<span></span>
+            </th>
+            <th onclick="sortTable(16, 'playerTable')">
+              Yellow Cards<span></span>
+            </th>
+            <th onclick="sortTable(17, 'playerTable')">
+              Red Cards<span></span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if myTeamPlayers_sorted %} {% for player in myTeamPlayers_sorted %}
+          <tr>
+            <td class="fixed-col">{{player.name}}</td>
+            <td>{{player.team}}</td>
+            <td>{{player.total_points}}</td>
+            <td>{{"{:,.3f}".format((player.total_points / overview.total_points)*100)}}%</td>
+            <td>{{player.bought_for}}</td>
+            <td>{{player.VPM}}</td>
+            <td>{{player.minutes}}</td>
+            <td>{{player.goals_scored}}</td>
+            <td>{{player.assists}}</td>
+            <td>{{player.saves}}</td>
+            <td>{{player.clean_sheets}}</td>
+            <td>{{player.bonus}}</td>
+            <td>{{player.gameweeks_in_team}}</td>
+            <td>{{player.gameweeks_on_pitch}}</td>
+            <td>{{player.times_captain}}</td>
+            <td>{{player.times_vice_captain}}</td>
+            <td>{{player.yellow_cards}}</td>
+            <td>{{player.red_cards}}</td>
+          </tr>
+          {% endfor %} {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- End Players Performance -->
+
+<!-- Start Season Captains -->
+<div class="season-captains">
+  <div class="button-wrapper">
+    <button type="button" class="collapsible">
+      Season's Captains
+    </button>
+  </div>
+  <div class="container">
+    <div class="content">
+      <table id="capTable">
+        <thead>
+          <tr>
+            <th class="fixed-col" onclick="sortTable(0, 'capTable')">
+              Gameweek<span> &uarr;</span>
+            </th>
+            <th onclick="sortTable(1, 'capTable')">Captain<span></span></th>
+            <th onclick="sortTable(2, 'capTable')">
+              Captain Points<span></span>
+            </th>
+            <th onclick="sortTable(3, 'capTable')">
+              Captain Points Without Captaincy<span></span>
+            </th>
+            <th onclick="sortTable(4, 'capTable')">Top Player<span></span></th>
+            <th onclick="sortTable(5, 'capTable')">
+              Top Player Points<span></span>
+            </th>
+            <th onclick="sortTable(6, 'capTable')">
+              Potential Lost<span></span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if captainPicks %} {% for gameweek,captainData in
+          captainPicks.items() %}
+          <tr>
+            <td class="fixed-col">
+              {{gameweek if gameweek<30 else gameweek-9}}
+            </td>
+            <td>{{captainData.captain}}</td>
+            <td>{{captainData.captain_score}}</td>
+            <td>{{captainData.captain_score_without}}</td>
+            <td>{{captainData.top_player}}</td>
+            <td>{{captainData.top_player_score}}</td>
+            <td>{{captainData.potential_lost}}</td>
+          </tr>
+          {% endfor %} {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- End Season Captains -->
+
+<!-- Start Dream Team -->
+<div class="container">
+  <h2>Season's Dream Team</h2>
+  <div class="h-r"><span></span></div>
+</div>
+<div class="dream-team">
+  <div class="container">
+    <div class="formation">
+      <h3>Choose Your Formation</h3>
+      <input type="radio" id="best" name="formation" value="best" checked />
+      <label for="best"><span>Season's best</span></label>
+      <input type="radio" id="541" name="formation" value="541" />
+      <label for="541"><span>5 - 4 - 1</span></label>
+      <input type="radio" id="532" name="formation" value="532" />
+      <label for="532"><span>5 - 3 - 2</span></label>
+      <input type="radio" id="523" name="formation" value="541" />
+      <label for="523"><span>5 - 2 - 3</span></label>
+      <input type="radio" id="451" name="formation" value="451" />
+      <label for="451"><span>4 - 5 - 1</span></label>
+      <input type="radio" id="442" name="formation" value="442" />
+      <label for="442"><span>4 - 4 - 2</span></label>
+      <input type="radio" id="433" name="formation" value="433" />
+      <label for="433"><span>4 - 3 - 3</span></label>
+      <input type="radio" id="352" name="formation" value="352" />
+      <label for="352"><span>3 - 5 - 2</span></label>
+      <input type="radio" id="343" name="formation" value="343" />
+      <label for="343"><span>3 - 4 - 3</span></label>
+    </div>
+    <div class="pitch">
+      <div class="pitch-bg">
+        {% if dreamTeams %} {% for formation_name,team in dreamTeams.items() %}
+        <div
+          class="team-holder {% if  not formation_name=='best' %}{{'hidden'}}{% endif %}"
+          id="team{{formation_name}}"
+        >
+          <div class="line goal-keeper">
+            <div class="box one-box">
+              <div class="player-holder">
+                <img
+                  src="/static/images/Kits/gk-{{team[0][0].team_id}}.png"
+                  alt="{{team[0][0].name}}"
+                />
+                <span class="name">{{team[0][0].name}}</span>
+                <span class="points">{{team[0][0].total_points}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="line defence">
+            {% for defender in team[1] %}
+            <div class="box">
+              <div class="player-holder">
+                <img
+                  src="/static/images/Kits/{{defender.team_id}}.png"
+                  alt="{{defender.name}}"
+                />
+                <span class="name">{{defender.name}}</span>
+                <span class="points">{{defender.total_points}}</span>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="line midfield">
+            {% for mid in team[2] %}
+            <div class="box">
+              <div class="player-holder">
+                <img
+                  src="/static/images/Kits/{{mid.team_id}}.png"
+                  alt="{{mid.name}}"
+                />
+                <span class="name">{{mid.name}}</span>
+                <span class="points">{{mid.total_points}}</span>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="line attack">
+            {% for attacker in team[3] %}
+            <div class="box">
+              <div class="player-holder">
+                <img
+                  src="/static/images/Kits/{{attacker.team_id}}.png"
+                  alt="{{attacker.name}}"
+                />
+                <span class="name">{{attacker.name}}</span>
+                <span class="points">{{attacker.total_points}}</span>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %} {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Dream Team -->
+
+<!-- Start Selection By Teams -->
+<div class="container">
+  <h2>Selection By Teams</h2>
+  <div class="h-r"><span></span></div>
+</div>
+<div class="team-selection">
+  <div class="container">
+    <div class="left">
+      {%if selectionByTeam_sorted_left %} {% for teamId,teamData in
+      selectionByTeam_sorted_left.items() %}
+      <div class="team-info">
+        <div class="image">
+          <img
+            src="/static/images/Logos/{{teamId}}.png"
+            alt="{{teamData.team_name}}"
+          />
+        </div>
+        <div class="data">
+          <h3>{{teamData.team_name}}</h3>
+          <p>
+            {% if teamData.players_names|length
+            %}{{teamData.players_names[0]}}{% endif %} {% if
+            teamData.players_names|length > 1 %} {% for i in range(1,
+            teamData.players_names|length) %} -- {{teamData.players_names[i]}}{%
+            endfor %} {% endif %}
+          </p>
+        </div>
+        <div class="score">
+          <p class="number">{{teamData.points}}</p>
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+    </div>
+    <div class="right">
+      {%if selectionByTeam_sorted_right %} {% for teamId,teamData in
+      selectionByTeam_sorted_right.items() %}
+      <div class="team-info">
+        <div class="image">
+          <img
+            src="/static/images/Logos/{{teamId}}.png"
+            alt="{{teamData.team_name}}"
+          />
+        </div>
+        <div class="data">
+          <h3>{{teamData.team_name}}</h3>
+          <p>
+            {% if teamData.players_names %}{{teamData.players_names[0]}}{% endif
+            %} {% if teamData.players_names|length >1 %} {% for i in range(1,
+            teamData.players_names|length) %} -- {{teamData.players_names[i]}}{%
+            endfor %} {% endif %}
+          </p>
+        </div>
+        <div class="score">
+          <p class="number">{{teamData.points}}</p>
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+    </div>
+    <div class="clearFix"></div>
+    <div class="chart-holder">
+      <div id="piechart"></div>
+    </div>
+  </div>
+</div>
+<!-- End Selection By Teams -->
+
+<!-- Loader Page -->
+<div class="loader-wrapper" display="flex">
+  <div class='revolver'><span class="loader"><span class="loader-inner"></span></span></div>
+  <div class='message'>Fetching Team's Stats. Please Wait.</p>  </div><p>
+  <p></p>
+</div>
+
+<!-- End Loader Page -->
+
+<!-- Scripts -->
+<script
+type="text/javascript"
+src="https://www.gstatic.com/charts/loader.js"
+></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+{% endblock %}

@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>FrontEnd Design Tutorial</title>
+    <link rel="stylesheet" href="static/css/normalize.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="content">
+        <div class="h-r"><span id="top"></span></div>
+        <h2>My Fantasy Stats</h2>
+        <div class="h-r"><span id="bottom"></span></div>
+        <form>
+          <label>Enter another ID</label>
+          <input type="text" />
+          <input type="submit" value="GO" />
+        </form>
+      </div>
+    </div>
+    <div class="bottom-border"></div>
+    <!-- End Header -->
+
+    <!-- Start Overview -->
+    <div class="container">
+      <h2>Season's Top Performers</h2>
+      <div class="h-r"><span></span></div>
+    </div>
+    <div class="overview">
+      <div class="container">
+        <div class="overview-holder">
+          <div class="left">
+            <div class="up"><h3>Manager Name</h3></div>
+            <div class="down"><h2>Othman Mohamed</h2></div>
+          </div>
+          <div class="mid">
+            <div class="up"><h3>Team Name</h3></div>
+            <div class="down"><h2>Ottomans</h2></div>
+          </div>
+          <div class="right">
+            <div class="up">
+              <div class="team-info">
+                <div class="info">
+                  <h5>Total Points</h5>
+                  <span>2196</span>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="info">
+                  <h5>Overall Rank</h5>
+                  <span>5,339</span>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="info">
+                  <h5>Number of Unique Players</h5>
+                  <span>57</span>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="info">
+                  <h5>Total minutes</h5>
+                  <span>33,133</span>
+                </div>
+              </div>
+            </div>
+            <div class="down">
+              <div class="clearFix"></div>
+              <div class="team-info">
+                <div class="info">
+                  <h5>Total Goals</h5>
+                  <span>94</span>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="info">
+                  <h5>Total Assists</h5>
+                  <span>92</span>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="info">
+                  <h5>Total Bonus Points</h5>
+                  <span>220</span>
+                </div>
+              </div>
+              <div class="team-info"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Overview -->
+
+    <!-- Start Player Cards -->
+    <div class="clearfix"></div>
+    <div class="player-cards">
+      <div class="container">
+        <h2>Season's Top Performers</h2>
+        <div class="h-r"><span></span></div>
+      </div>
+      <div class="card">
+        <div class="image-holder">
+          <img
+            src="https://resources.premierleague.com/premierleague/photos/players/110x140/p118748.png"
+            alt="Salah"
+          />
+        </div>
+        <h1>Salah</h1>
+        <p class="title">Total Points <span>220</span></p>
+        <p>Goals <span>14</span></p>
+        <p>Assists <span>9</span></p>
+        <p>Bonus Points <span>21</span></p>
+        <p>Bought for <span>11.5 Million</span></p>
+        <p>
+          <span class="card-title">Season's Top Player</span>
+        </p>
+      </div>
+      <div class="card">
+        <div class="image-holder">
+          <img
+            src="https://resources.premierleague.com/premierleague/photos/players/110x140/p98747.png"
+            alt="Pope"
+          />
+        </div>
+        <h1>Pope</h1>
+        <p class="title">Total Points <span>130</span></p>
+        <p>Bought For <span>4.5 Million</span></p>
+        <p>Value per Million <span>28.88</span></p>
+        <p>
+          <span class="card-title">Best Value per Million</span>
+        </p>
+      </div>
+      <div class="card">
+        <div class="image-holder">
+          <img
+            src="https://resources.premierleague.com/premierleague/photos/players/110x140/p159533.png"
+            alt="Traore"
+          />
+        </div>
+        <h1>Traore</h1>
+        <p class="title">Total Points <span>98</span></p>
+        <p>Weeks in Team <span>25</span></p>
+        <p>Weeks Captain <span>11</span></p>
+        <p>Weeks Top Player of the Team <span>10</span></p>
+        <p><span class="card-title">Prefered Captain</span></p>
+      </div>
+    </div>
+    <!-- End Player Cards -->
+
+    <!-- Start Dream Team -->
+    <div class="container">
+      <h2>Season's Dream Team</h2>
+      <div class="h-r"><span></span></div>
+    </div>
+    <div class="dream-team">
+      <div class="container">
+        <div class="formation">
+          <h3>Choose Your Formation</h3>
+          <input type="radio" id="best" name="formation" value="best" checked />
+          <label for="best"><span>Season's best</span></label>
+          <input type="radio" id="541" name="formation" value="541" />
+          <label for="541"><span>5 - 4 - 1</span></label>
+          <input type="radio" id="532" name="formation" value="532" />
+          <label for="532"><span>5 - 3 - 2</span></label>
+          <input type="radio" id="523" name="formation" value="541" />
+          <label for="523"><span>5 - 2 - 3</span></label>
+          <input type="radio" id="451" name="formation" value="451" />
+          <label for="451"><span>4 - 5 - 1</span></label>
+          <input type="radio" id="442" name="formation" value="442" />
+          <label for="442"><span>4 - 4 - 2</span></label>
+          <input type="radio" id="433" name="formation" value="433" />
+          <label for="433"><span>4 - 3 - 3</span></label>
+          <input type="radio" id="352" name="formation" value="352" />
+          <label for="352"><span>3 - 5 - 2</span></label>
+          <input type="radio" id="343" name="formation" value="343" />
+          <label for="343"><span>3 - 4 - 3</span></label>
+        </div>
+        <div class="pitch">
+          <div class="pitch-bg">
+            <div class="team-holder" id="0">
+              <div class="line goal-keeper">
+                <div class="box one-box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+              <div class="line defence">
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+              <div class="line midfield">
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+              <div class="line attack">
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team-holder hidden" id="5">
+              <div class="line goal-keeper">
+                <div class="box one-box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+              <div class="line defence">
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+              <div class="line midfield">
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+              <div class="line attack">
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team-holder hidden" id="8">
+              <div class="line goal-keeper">
+                <div class="box one-box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+              <div class="line defence">
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+              <div class="line midfield">
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+              <div class="line attack">
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="player-holder">
+                    <img
+                      src="https://fantasy.premierleague.com/dist/img/shirts/special/shirt_90_1-110.png"
+                      alt="Pope"
+                    />
+                    <span class="name">Pope</span>
+                    <span class="points">100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Dream Team -->
+
+    <!-- Start Selection By Teams -->
+    <div class="container">
+      <h2>Selection By Teams</h2>
+      <div class="h-r"><span></span></div>
+    </div>
+    <div class="team-selection">
+      <div class="container">
+        <div class="left">
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/1.png" alt="AFC Bornemouth" />
+            </div>
+            <div class="data">
+              <h3>AFC Bornemouth</h3>
+              <p>Wilson</p>
+            </div>
+            <div class="score">
+              <p class="number">80</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/2.png" alt="Arsenal" />
+            </div>
+            <div class="data">
+              <h3>Arsenal</h3>
+              <p>Aubemiang -- Maitland-Niles -- Saka -- Martinez</p>
+            </div>
+            <div class="score">
+              <p class="number">90</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/3.png" alt="Aston Villa" />
+            </div>
+            <div class="data">
+              <h3>Aston Villa</h3>
+              <p>Trezegeut -- Grealish -- Weasley -- Heaton</p>
+            </div>
+            <div class="score">
+              <p class="number">74</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/4.png" alt="Brighton" />
+            </div>
+            <div class="data">
+              <h3>Brighton</h3>
+              <p></p>
+            </div>
+            <div class="score">
+              <p class="number">0</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/5.png" alt="Burnley" />
+            </div>
+            <div class="data">
+              <h3>Burnley</h3>
+              <p>Pope</p>
+            </div>
+            <div class="score">
+              <p class="number">131</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/6.png" alt="Chelsea" />
+            </div>
+            <div class="data">
+              <h3>Chelsea</h3>
+              <p>
+                Alonso -- Barkley -- Kante -- Abraham -- Giroud -- Pulisic --
+                Hudson-Odoi -- Willian
+              </p>
+            </div>
+            <div class="score">
+              <p class="number">290</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/7.png" alt="Crystal Palace" />
+            </div>
+            <div class="data">
+              <h3>Crystal Palace</h3>
+              <p>Ayew</p>
+            </div>
+            <div class="score">
+              <p class="number">12</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/8.png" alt="Everton" />
+            </div>
+            <div class="data">
+              <h3>Everton</h3>
+              <p>Sigurdsson -- Pickford</p>
+            </div>
+            <div class="score">
+              <p class="number">39</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/9.png" alt="Lecister" />
+            </div>
+            <div class="data">
+              <h3>Leicster</h3>
+              <p>Vardy -- Soyuncu</p>
+            </div>
+            <div class="score">
+              <p class="number">189</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/10.png" alt="Liverpool" />
+            </div>
+            <div class="data">
+              <h3>Liverpool</h3>
+              <p>Salah -- Alexander-Arnold -- Mane -- Firmino -- Robertson</p>
+            </div>
+            <div class="score">
+              <p class="number">420</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/11.png" alt="Man City" />
+            </div>
+            <div class="data">
+              <h3>Man City</h3>
+              <p>
+                Aguero -- Bernardo Silva -- David Silva -- Zinchenko -- De
+                Bruyne -- Mahrez -- Sterling -- Foden -- Walker
+              </p>
+            </div>
+            <div class="score">
+              <p class="number">409</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/12.png" alt="Man United" />
+            </div>
+            <div class="data">
+              <h3>Man Uniter</h3>
+              <p>Pogba -- Rashford -- Fernandes -- Wan-Bissaka -- Williams</p>
+            </div>
+            <div class="score">
+              <p class="number">383</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/13.png" alt="New Castle" />
+            </div>
+            <div class="data">
+              <h3>New Castle</h3>
+              <p>Joelinton</p>
+            </div>
+            <div class="score">
+              <p class="number">4</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/14.png" alt="Norwich" />
+            </div>
+            <div class="data">
+              <h3>Norwich</h3>
+              <p>Cantwell - Pukki</p>
+            </div>
+            <div class="score">
+              <p class="number">55</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/15.png" alt="Sheffield" />
+            </div>
+            <div class="data">
+              <h3>Sheffield</h3>
+              <p>Lundstram -- Baldock</p>
+            </div>
+            <div class="score">
+              <p class="number">190</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/16.png" alt="Southampton" />
+            </div>
+            <div class="data">
+              <h3>Southampton</h3>
+              <p>Ings</p>
+            </div>
+            <div class="score">
+              <p class="number">179</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/17.png" alt="Spurs" />
+            </div>
+            <div class="data">
+              <h3>Spurs</h3>
+              <p>Aurier -- Kane -- Alli</p>
+            </div>
+            <div class="score">
+              <p class="number">96</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/18.png" alt="Watford" />
+            </div>
+            <div class="data">
+              <h3>Watford</h3>
+              <p></p>
+            </div>
+            <div class="score">
+              <p class="number">0</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/19.png" alt="West Ham" />
+            </div>
+            <div class="data">
+              <h3>West Ham</h3>
+              <p></p>
+            </div>
+            <div class="score">
+              <p class="number">0</p>
+            </div>
+          </div>
+          <div class="team-info">
+            <div class="image">
+              <img src="images/Logos/20.png" alt="Wolverhampton" />
+            </div>
+            <div class="data">
+              <h3>Wolverhampton</h3>
+              <p>Jimenez - Traore - Doherty</p>
+            </div>
+            <div class="score">
+              <p class="number">102</p>
+            </div>
+          </div>
+        </div>
+        <div class="clearFix"></div>
+        <div class="chart-holder">
+          <div id="piechart"></div>
+        </div>
+      </div>
+    </div>
+    <!-- End Selection By Teams -->
+
+    <!-- Start Players Performance -->
+    <div class="player-performance">
+      <div class="button-wrapper">
+        <button type="button" class="collapsible">
+          Player Performance<span></span>
+        </button>
+      </div>
+      <div class="table-wrapper">
+        <div class="container">
+          <div class="content">
+            <table>
+              <thead>
+                <tr>
+                  <th class="fixed-col">Player Name</th>
+                  <th>Points</th>
+                  <th>Bought For</th>
+                  <th>Value Per Million</th>
+                  <th>Minutes</th>
+                  <th>Goals</th>
+                  <th>Assists</th>
+                  <th>Saves</th>
+                  <th>Clean Sheets</th>
+                  <th>Bonus</th>
+                  <th>Clean Sheets</th>
+                  <th>Times In Team</th>
+                  <th>Times on Pitch</th>
+                  <th>Times Captain</th>
+                  <th>Times Vice Captain</th>
+                  <th>Yellow Cards</th>
+                  <th>Red Cards</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="fixed-col">Salah</td>
+                  <td>240</td>
+                  <td>12.5 Million</td>
+                  <td>25.33</td>
+                  <td>1190</td>
+                  <td>20</td>
+                  <td>9</td>
+                  <td>0</td>
+                  <td>15</td>
+                  <td>31</td>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>29</td>
+                  <td>17</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Players Performance -->
+
+    <!-- Start Season Captains -->
+    <div class="season-captains">
+      <div class="container">
+        <button type="button" class="collapsible active">
+          season-captains
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- End Season Captains -->
+
+    <!--===================================================-->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="/static/js/main.js"></script>
+
+    <!--===================================================-->
+  </body>
+</html>
