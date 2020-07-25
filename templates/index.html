@@ -1,5 +1,9 @@
 {% extends 'base.html' %} {% block head %}
-<title>My Fantasy Stats: {{overview.team_name}}</title> {% endblock %} {% block
+<title>My Fantasy Stats: {{overview.team_name}}</title>
+<link
+rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}"
+/> {% endblock %} {% block
 body %}
 <!-- Start Header -->
 <div class="header">
